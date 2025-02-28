@@ -1,0 +1,162 @@
+@keyframes modalAnimation {
+  0% {
+    opacity: 0;
+    z-index: -1;
+    transform: translateX(-100px);
+  }
+  80% {
+    opacity: 0;
+    transform: translateX(-100px);
+    z-index: 2;
+  }
+  to {
+    transform: translateX();
+    opacity: 1;
+  }
+}
+
+.modal {
+  width: 500px;
+  height: 470px;
+  // position: absolute;
+  // top: calc(100% / 2 - 200px);
+  // left: calc(100% / 2 - 230px);
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 20px;
+  animation: modalAnimation 2s ease-out;
+  z-index: 2;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+.subtitle {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.textInput {
+  margin-top: 30px !important;
+}
+
+.personalData {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 20px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.personalDataLink {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 20px;
+  color: #009fe3;
+  text-decoration: none;
+}
+
+.buttonClose {
+  position: absolute !important;
+  top: 10px !important;
+  right: 10px !important;
+}
+
+.linkPhone {
+  color: #009fe3;
+}
+
+.linkPhone:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1050px) {
+  .modal {
+    width: 400px;
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .modal {
+    width: 300px;
+    height: 440px;
+  }
+  .title {
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .subtitle {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 5px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .textInput {
+    margin-top: 15px !important;
+  }
+
+  .buttonClose {
+    top: 5px !important;
+    right: 5px !important;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .modal {
+    width: 300px;
+    height: 440px;
+    top: calc(100% / 2 - 220px);
+    left: calc(100% / 2 - 150px);
+  }
+  .title {
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .subtitle {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 5px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .textInput {
+    margin-top: 15px !important;
+  }
+
+  .buttonClose {
+    top: 5px !important;
+    right: 5px !important;
+  }
+}
