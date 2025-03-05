@@ -5,10 +5,13 @@ import WhyMe from "@/widgets/whyMe/ui/whyMe";
 import { WhichCar } from "@/widgets/whichCar/ui/whichCar";
 import img1 from "@/shared/images/bg1.webp";
 import img2 from "@/shared/images/bg2.webp";
+import img3 from "@/shared/images/bg3.webp";
 import { BgWrapper } from "@/widgets/bgWrapper/ui/bgWrapper";
+import { CarPriceMessenger } from "@/widgets/carPriceMessenger/ui/carPriceMessenger";
+import { WhichCarContent } from "@/widgets/whichCarContent/ui/whichCarContent";
 
 export default function Home() {
-  const backgroundImages = [img1, img2];
+  const backgroundImages = [img1, img2, img3];
   return (
     <main className={styles.main}>
       <BgWrapper images={backgroundImages}>
@@ -16,6 +19,8 @@ export default function Home() {
         <MainInfo data-image-index={0} />
         <WhyMe />
         <WhichCar data-image-index={1} />
+        <WhichCarContent />
+        <CarPriceMessenger data-image-index={2} />
       </BgWrapper>
     </main>
   );
