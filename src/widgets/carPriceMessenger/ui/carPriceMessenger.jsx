@@ -9,7 +9,6 @@ export const CarPriceMessenger = () => {
           Проведем оценку Вашего автомобиля в мессенджерах
         </h2>
       </div>
-      <div className={styles.contentContainer}></div>
     </section>
   );
 };

@@ -9,6 +9,7 @@ import img3 from "@/shared/images/bg3.webp";
 import { BgWrapper } from "@/widgets/bgWrapper/ui/bgWrapper";
 import { CarPriceMessenger } from "@/widgets/carPriceMessenger/ui/carPriceMessenger";
 import { WhichCarContent } from "@/widgets/whichCarContent/ui/whichCarContent";
+import { CarPriceContent } from "@/widgets/carPriceContent/ui/carPriceContent";
 
 export default function Home() {
   const backgroundImages = [img1, img2, img3];
@@ -21,6 +22,7 @@ export default function Home() {
         <WhichCar data-image-index={1} />
         <WhichCarContent />
         <CarPriceMessenger data-image-index={2} />
+        <CarPriceContent />
       </BgWrapper>
     </main>
   );

@@ -68,7 +68,7 @@ export const BgWrapper = ({ children, images }) => {
         <div
           className={styles.overlay}
           style={{
-            background: `linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 1))`,
+            background: `linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 1))`,
           }}
         />
       </div>

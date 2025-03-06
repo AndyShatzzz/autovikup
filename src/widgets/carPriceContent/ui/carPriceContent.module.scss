@@ -1,0 +1,264 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  position: relative;
+}
+
+.contentWrapper {
+  width: 1200px;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.subtitleContainer {
+  width: 500px;
+  height: 90px;
+  background-color: #fff;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+  margin-top: 15px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.subtitle {
+  width: 440px;
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.socialContainer {
+  width: 500px;
+  height: 90px;
+  margin-left: 50px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.whatsApp {
+  width: 240px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2cb742;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.whatsApp:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.telegram {
+  width: 240px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #27a7e7;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.telegram:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.imgContainer {
+  width: 600px;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.img {
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
+  pointer-events: none;
+  transform: scale(1.5);
+}
+
+@media screen and (max-width: 1220px) {
+  .contentWrapper {
+    width: 900px;
+    height: 600px;
+  }
+
+  .subtitleContainer {
+    width: 420px;
+    height: 90px;
+    margin-left: 30px;
+  }
+
+  .subtitle {
+    width: 380px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .socialContainer {
+    width: 420px;
+    height: 90px;
+    margin-left: 30px;
+  }
+
+  .imgContainer {
+    width: 420px;
+    height: 600px;
+  }
+
+  .img {
+    width: 420px;
+    height: 600px;
+    object-fit: cover;
+    pointer-events: none;
+    transform: scale(1.5);
+  }
+
+  .whatsApp {
+    width: 200px;
+  }
+
+  .telegram {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .contentWrapper {
+    width: 600px;
+    height: 500px;
+  }
+
+  .subtitleContainer {
+    width: 280px;
+    height: 100px;
+    margin-left: 30px;
+  }
+
+  .subtitle {
+    width: 220px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .socialContainer {
+    width: 280px;
+    height: 90px;
+    margin-left: 30px;
+  }
+
+  .imgContainer {
+    width: 280px;
+    height: 500px;
+  }
+
+  .img {
+    width: 280px;
+    height: 500px;
+    object-fit: cover;
+    pointer-events: none;
+    transform: scale(1.5);
+  }
+
+  .whatsApp {
+    width: 135px;
+    height: 50px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .telegram {
+    width: 135px;
+    height: 50px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .contentWrapper {
+    width: 300px;
+    height: 800px;
+    flex-direction: column-reverse;
+  }
+
+  .subtitleContainer {
+    width: 280px;
+    height: 100px;
+    margin-left: 3px;
+  }
+
+  .subtitle {
+    width: 220px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .socialContainer {
+    width: 280px;
+    height: 90px;
+    margin-left: 3px;
+  }
+
+  .imgContainer {
+    width: 300px;
+    height: 400px;
+  }
+
+  .img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    pointer-events: none;
+    transform: scale(2.2);
+  }
+
+  .whatsApp {
+    width: 135px;
+    height: 50px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .telegram {
+    width: 135px;
+    height: 50px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
