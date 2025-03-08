@@ -48,9 +48,6 @@ export const CarBuyCarousel = (props) => {
                 />
                 <h3 className={styles.subtitle}>{item.subtitle1}</h3>
                 <h3 className={styles.subtitle}>{item.subtitle2}</h3>
-                <h3 className={styles.subtitle}>
-                  Цена выкупа: {item.price} рублей
-                </h3>
                 <p className={styles.text}>{item.text}</p>
               </div>
             </div>
