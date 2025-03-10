@@ -64,11 +64,13 @@
   line-height: 20px;
   font-weight: 400;
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
 }
 
 .whatsApp:hover {
   cursor: pointer;
-  opacity: 0.8;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
 }
 
 .telegram {
@@ -84,11 +86,13 @@
   line-height: 20px;
   font-weight: 400;
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
 }
 
 .telegram:hover {
   cursor: pointer;
-  opacity: 0.8;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
 }
 
 .icon {
