@@ -23,6 +23,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.gridItem:hover {
+  cursor: pointer;
+  transform: scale(1.07);
 }
 
 .image {
