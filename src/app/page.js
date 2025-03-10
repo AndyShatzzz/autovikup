@@ -13,6 +13,7 @@ import { CarPriceMessenger } from "@/widgets/carPriceMessenger/ui/carPriceMessen
 import { WhichCarContent } from "@/widgets/whichCarContent/ui/whichCarContent";
 import { CarPriceContent } from "@/widgets/carPriceContent/ui/carPriceContent";
 import { WhatCarBuy } from "@/widgets/WhatCarBuy/ui/WhatCarBuy";
+import { StageOfBuy } from "@/widgets/stageOfBuy/ui/stageOfBuy";
 
 export default function Home() {
   const backgroundImages = [img1, img2, img3, img5];
@@ -27,6 +28,7 @@ export default function Home() {
         <CarPriceMessenger data-image-index={2} />
         <CarPriceContent />
         <WhatCarBuy data-image-index={3} />
+        <StageOfBuy />
       </BgWrapper>
     </main>
   );
