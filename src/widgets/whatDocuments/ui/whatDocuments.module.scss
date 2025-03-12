@@ -1,0 +1,235 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 100px;
+}
+
+.title {
+  width: 900px;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  font-size: 42px;
+  line-height: 56px;
+  font-weight: 600;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gridContent {
+  width: 900px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.gridItem {
+  width: 430px;
+  height: 230px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 1);
+  z-index: 2;
+  transition: background-color 0.3s ease;
+
+  .gridItem:hover & {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.number {
+  width: 100%;
+  height: 100%;
+  font-size: 140px;
+  line-height: 140px;
+  font-weight: 600;
+  z-index: 3;
+  position: relative;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  // background-image: url("../images/wdCar1.webp");
+  background-size: cover;
+  background-position: center;
+  mix-blend-mode: multiply;
+  transition: opacity 0.3s ease, color 0.3s ease;
+  padding-top: 37px;
+  padding-left: 34px;
+
+  .gridItem:hover & {
+    color: rgba(255, 255, 255, 0.6);
+    background-image: none;
+    mix-blend-mode: normal;
+    cursor: pointer;
+  }
+}
+
+.number1 {
+  background-image: url("../images/wdCar1.webp");
+}
+
+.number2 {
+  background-image: url("../images/wdCar2.webp");
+}
+
+.number3 {
+  background-image: url("../images/wdCar3.webp");
+}
+
+.number4 {
+  background-image: url("../images/wdCar4.webp");
+}
+
+.textContainer {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  padding-right: 30px;
+}
+
+.subtitle {
+  width: 200px;
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.text {
+  width: 200px;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 17px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 20px;
+  transition: color 0.3s ease;
+}
+
+.gridItem:hover .subtitle,
+.gridItem:hover .text {
+  color: #fff;
+}
+
+@media screen and (max-width: 930px) {
+  .title {
+    width: 600px;
+    height: 200px;
+    font-size: 36px;
+    line-height: 45px;
+    font-weight: 600;
+  }
+
+  .gridContent {
+    width: 600px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .gridItem {
+    width: 600px;
+    height: 230px;
+  }
+
+  .textContainer {
+    width: 250px;
+  }
+
+  .subtitle {
+    width: 250px;
+  }
+
+  .text {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .title {
+    width: 300px;
+    height: 200px;
+    font-size: 36px;
+    line-height: 45px;
+    font-weight: 600;
+  }
+
+  .gridContent {
+    width: 300px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .gridItem {
+    width: 300px;
+    height: 230px;
+  }
+
+  .number {
+    font-size: 100px;
+    line-height: 100px;
+    padding-top: 60px;
+    padding-left: 10px;
+  }
+  .textContainer {
+    width: 150px;
+    padding-right: 20px;
+  }
+
+  .subtitle {
+    width: 150px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .text {
+    width: 150px;
+    font-size: 14px;
+    line-height: 15px;
+    margin-top: 10px;
+  }
+}

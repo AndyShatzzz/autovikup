@@ -15,6 +15,7 @@ import { CarPriceContent } from "@/widgets/carPriceContent/ui/carPriceContent";
 import { WhatCarBuy } from "@/widgets/WhatCarBuy/ui/WhatCarBuy";
 import { StageOfBuy } from "@/widgets/stageOfBuy/ui/stageOfBuy";
 import { HaveQuestion } from "@/widgets/haveQuestion/ui/haveQuestion";
+import { WhatDocuments } from "@/widgets/whatDocuments/ui/whatDocuments";
 
 export default function Home() {
   const backgroundImages = [img1, img2, img3, img5];
@@ -31,6 +32,7 @@ export default function Home() {
         <WhatCarBuy data-image-index={3} />
         <StageOfBuy />
         <HaveQuestion />
+        <WhatDocuments />
       </BgWrapper>
     </main>
   );
