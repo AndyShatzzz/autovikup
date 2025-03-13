@@ -34,7 +34,7 @@ export default function Home() {
         <StageOfBuy />
         <HaveQuestion />
         <WhatDocuments />
-        <Footer />
+        <Footer data-image-index={4} />
       </BgWrapper>
     </main>
   );
