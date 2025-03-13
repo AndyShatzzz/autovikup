@@ -30,7 +30,7 @@ export const CarPriceContent = () => {
               target="blank"
             >
               <WhatsAppIcon className={styles.icon} />
-              Whats App
+              WhatsApp
             </a>
             <a
               className={styles.telegram}
