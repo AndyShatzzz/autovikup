@@ -1,8 +1,9 @@
 .container {
+  scroll-margin-top: 110px;
   width: 100%;
   position: relative;
   z-index: 1;
-  overflow-y: hidden;
+  // overflow-y: hidden;
 }
 
 .titleContainer {
@@ -38,6 +39,9 @@
 }
 
 @media screen and (max-width: 630px) {
+  .container {
+    scroll-margin-top: 70px;
+  }
   .title {
     width: 300px;
     font-size: 30px;

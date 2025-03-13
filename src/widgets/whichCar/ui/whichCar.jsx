@@ -3,7 +3,7 @@ import styles from "./whichCar.module.scss";
 
 export const WhichCar = () => {
   return (
-    <section className={styles.container} data-image-index={1}>
+    <section id="whichCar" className={styles.container} data-image-index={1}>
       <div className={styles.titleContainer}>
         <h2 className={styles.title}>Какие авто мы выкупаем?</h2>
       </div>

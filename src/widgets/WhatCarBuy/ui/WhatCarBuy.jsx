@@ -84,7 +84,7 @@ export const WhatCarBuy = () => {
   ];
 
   return (
-    <section className={styles.container} data-image-index={3}>
+    <section id="whatCarBuy" className={styles.container} data-image-index={3}>
       <div className={styles.titleContainer}>
         <h2 className={styles.title}>Примеры выкупленных автомобилей</h2>
       </div>

@@ -59,6 +59,7 @@
 }
 
 .container {
+  scroll-margin-top: 110px;
   width: 100%;
   // min-height: 100vh;
   display: flex;
@@ -149,6 +150,10 @@
 }
 
 @media screen and (max-width: 630px) {
+  .container {
+    scroll-margin-top: 70px;
+  }
+
   .contentContainer {
     width: 300px;
     margin-top: 60px;

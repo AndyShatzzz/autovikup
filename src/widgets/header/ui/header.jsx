@@ -1,10 +1,12 @@
 "use client";
 import styles from "./header.module.scss";
 import { useEffect, useState } from "react";
-import { IconButton } from "@mui/material";
+import { Avatar, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import Link from "next/link";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import TelegramIcon from "@mui/icons-material/Telegram";
 
 export default function Header() {
   const [headClass, setHeadClass] = useState(styles.header);
@@ -64,33 +66,62 @@ export default function Header() {
         </Link>
         <div className={menuStyle}>
           <Link
-            href="/#about"
+            href="/#whyMe"
             className={styles.links}
             onClick={handleCloseMenu}
           >
             О нас
           </Link>
           <Link
-            href="/materials"
+            href="/#whichCar"
             className={styles.links}
             onClick={handleCloseMenu}
           >
             Какие авто выкупаем
           </Link>
           <Link
-            href="/scope-of-application"
+            href="#whatCarBuy"
             className={styles.links}
             onClick={handleCloseMenu}
           >
-            Отзывы Клиентов
+            Выкупленные авто
           </Link>
           <Link
-            href="/#contacts"
+            href="#stageOfBuy"
             className={styles.links}
             onClick={handleCloseMenu}
           >
-            Контакты
+            Процедура выкупа
           </Link>
+          <div className={styles.containerFeedback}>
+            <a className={styles.linkPhone} href="tel:+74742391205">
+              +7(920) 520-69-69
+            </a>
+            <div className={styles.socials}>
+              <a
+                className={styles.linkSocial}
+                href="https://wa.me/79205206969"
+                target="blank"
+              >
+                <Avatar
+                  sx={{ width: "45px", height: "45px", bgcolor: "#2cb742" }}
+                >
+                  <WhatsAppIcon sx={{ width: "28px", height: "28px" }} />
+                </Avatar>
+              </a>
+              <a
+                className={styles.linkSocial}
+                href="https://t.me/ilusha_tarasov"
+                target="blank"
+              >
+                <Avatar
+                  sx={{ width: "45px", height: "45px", bgcolor: "#27a7e7" }}
+                >
+                  <TelegramIcon sx={{ width: "28px", height: "28px" }} />
+                </Avatar>
+              </a>
+            </div>
+          </div>
         </div>
         {!isMenuOpen && (
           <IconButton

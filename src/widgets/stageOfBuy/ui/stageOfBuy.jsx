@@ -7,7 +7,7 @@ import CurrencyRubleIcon from "@mui/icons-material/CurrencyRuble";
 
 export const StageOfBuy = () => {
   return (
-    <section className={styles.container}>
+    <section id="stageOfBuy" className={styles.container}>
       <div className={styles.contentContainer}>
         <h2 className={styles.title}>Порядок выкупа автомобиля</h2>
         <div className={styles.iconsContainer}>

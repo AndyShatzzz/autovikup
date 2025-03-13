@@ -41,7 +41,7 @@ export default function WhyMe() {
   };
 
   return (
-    <section className={styles.container}>
+    <section id="whyMe" className={styles.container}>
       <div className={styles.contentContainer}>
         {arrData &&
           arrData.map((item) => (

@@ -39,7 +39,7 @@ export const WhatDocuments = () => {
   ];
 
   return (
-    <section className={styles.container}>
+    <section id="whatDocuments" className={styles.container}>
       <h2 className={styles.title}>Документы для быстрого выкупа авто</h2>
       <div className={styles.gridContent}>
         {data.map((item, i) => (

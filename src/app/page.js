@@ -6,8 +6,8 @@ import { WhichCar } from "@/widgets/whichCar/ui/whichCar";
 import img1 from "@/shared/images/bg1.webp";
 import img2 from "@/shared/images/bg2.webp";
 import img3 from "@/shared/images/bg3.webp";
-import img4 from "@/shared/images/bg4.webp";
 import img5 from "@/shared/images/bg5.webp";
+import img6 from "@/shared/images/bg6.webp";
 import { BgWrapper } from "@/widgets/bgWrapper/ui/bgWrapper";
 import { CarPriceMessenger } from "@/widgets/carPriceMessenger/ui/carPriceMessenger";
 import { WhichCarContent } from "@/widgets/whichCarContent/ui/whichCarContent";
@@ -16,9 +16,10 @@ import { WhatCarBuy } from "@/widgets/WhatCarBuy/ui/WhatCarBuy";
 import { StageOfBuy } from "@/widgets/stageOfBuy/ui/stageOfBuy";
 import { HaveQuestion } from "@/widgets/haveQuestion/ui/haveQuestion";
 import { WhatDocuments } from "@/widgets/whatDocuments/ui/whatDocuments";
+import { Footer } from "@/widgets/footer/ui/footer";
 
 export default function Home() {
-  const backgroundImages = [img1, img2, img3, img5];
+  const backgroundImages = [img1, img2, img3, img5, img6];
   return (
     <main className={styles.main}>
       <BgWrapper images={backgroundImages}>
@@ -33,6 +34,7 @@ export default function Home() {
         <StageOfBuy />
         <HaveQuestion />
         <WhatDocuments />
+        <Footer />
       </BgWrapper>
     </main>
   );
