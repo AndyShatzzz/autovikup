@@ -15,17 +15,35 @@
   }
 }
 
+@keyframes modalAnimationPopup {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .modal {
   width: 500px;
   height: 470px;
-  // position: absolute;
-  // top: calc(100% / 2 - 200px);
-  // left: calc(100% / 2 - 230px);
   border-radius: 20px;
   background-color: #fff;
   padding: 20px;
   animation: modalAnimation 2s ease-out;
-  z-index: 2;
+  z-index: 1;
+}
+
+.modalPopup {
+  width: 500px;
+  height: 470px;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 20px;
+  animation: modalAnimationPopup 0.3s ease-out;
+  z-index: 1;
 }
 
 .title {
@@ -50,7 +68,7 @@
 }
 
 .textInput {
-  margin-top: 30px !important;
+  margin-top: 20px !important;
 }
 
 .personalData {
@@ -61,6 +79,7 @@
   line-height: 18px;
   margin-top: 20px;
   color: rgba(0, 0, 0, 0.5);
+  letter-spacing: -0.75px;
 }
 
 .personalDataLink {
@@ -69,7 +88,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  margin-top: 20px;
+  margin-top: 10px;
   color: #009fe3;
   text-decoration: none;
 }
@@ -92,14 +111,22 @@
 @media screen and (max-width: 1050px) {
   .modal {
     width: 400px;
-    height: 500px;
+    height: 510px;
+  }
+  .modalPopup {
+    width: 400px;
+    height: 510px;
   }
 }
 
 @media screen and (max-width: 850px) {
   .modal {
     width: 300px;
-    height: 440px;
+    height: 490px;
+  }
+  .modalPopup {
+    width: 300px;
+    height: 490px;
   }
   .title {
     font-size: 18px;
@@ -130,7 +157,13 @@
 @media screen and (max-width: 630px) {
   .modal {
     width: 300px;
-    height: 440px;
+    height: 490px;
+    top: calc(100% / 2 - 220px);
+    left: calc(100% / 2 - 150px);
+  }
+  .modalPopup {
+    width: 300px;
+    height: 490px;
     top: calc(100% / 2 - 220px);
     left: calc(100% / 2 - 150px);
   }

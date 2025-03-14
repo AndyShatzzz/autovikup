@@ -1,0 +1,72 @@
+.wrapperAbsolute {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(119, 115, 115, 0.7);
+}
+
+.feedBackContainer {
+  width: 500px;
+  height: 510px;
+  position: relative;
+  top: calc(100% / 2 - 265px);
+  left: calc(100% / 2 - 250px);
+}
+
+.buttonClose {
+  top: 5px;
+  right: -495px;
+  z-index: 6;
+}
+
+@media screen and (max-width: 1050px) {
+  .feedBackContainer {
+    width: 400px;
+    height: 500px;
+    position: relative;
+    top: calc(100% / 2 - 265px);
+    left: calc(100% / 2 - 250px);
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .feedBackContainer {
+    width: 400px;
+    height: 500px;
+    position: relative;
+    top: calc(100% / 2 - 265px);
+    left: calc(100% / 2 - 200px);
+  }
+  .buttonClose {
+    top: 5px;
+    right: -405px;
+    z-index: 6;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .feedBackContainer {
+    width: 300px;
+    height: 490px;
+    position: relative;
+    top: calc(100% / 2 - 265px);
+    left: calc(100% / 2 - 150px);
+  }
+
+  .buttonClose {
+    top: 5px;
+    right: -305px;
+    z-index: 6;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .buttonClose {
+    top: 0;
+    right: -265px;
+    z-index: 6;
+  }
+}

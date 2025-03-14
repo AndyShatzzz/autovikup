@@ -1,14 +1,16 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./mainInfo.module.scss";
 import FeedBack from "@/entities/feedBack/ui/feedBack";
+import PhoneForwardedIcon from "@mui/icons-material/PhoneForwarded";
+import { SpeedDial } from "@mui/material";
+import { FeedBackPopup } from "@/widgets/feedBackPopup/ui/feedBackPopup";
 
 export const MainInfo = () => {
+  const [isOpenModal, setIsOpenModal] = useState(false);
   return (
     <section className={styles.container} data-image-index={0}>
-      {/* <div className={styles.imgContainer}>
-        <Image className={styles.img} src={img1} alt="Автомобиль" />
-      </div> */}
       <div className={styles.contentContainer}>
         <div className={styles.textContainer}>
           <h1 className={styles.title}>
@@ -27,11 +29,35 @@ export const MainInfo = () => {
             Эвакуатор при необходимости -{" "}
             <span className={styles.colorRed}>за счёт компании</span>
           </p>
+          <button
+            onClick={() => setIsOpenModal(true)}
+            className={styles.feedBackButton}
+          >
+            Оставить заявку
+          </button>
         </div>
         <div className={styles.feedBackContainer}>
           <FeedBack />
         </div>
       </div>
+      <SpeedDial
+        className={styles.speedDeal}
+        ariaLabel="social-media"
+        sx={{
+          position: "fixed",
+          bottom: "50px",
+          right: "50px",
+        }}
+        title="Заказать звонок"
+        icon={<PhoneForwardedIcon />}
+        onClick={() => setIsOpenModal(true)}
+      ></SpeedDial>
+      {isOpenModal && (
+        <FeedBackPopup
+          isOpenModal={isOpenModal}
+          setIsOpenModal={setIsOpenModal}
+        />
+      )}
     </section>
   );
 };

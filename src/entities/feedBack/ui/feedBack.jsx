@@ -1,13 +1,11 @@
 "use client";
-
 import { Box, TextField, Button, Snackbar, IconButton } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import styles from "./feedBack.module.scss";
-// import emailjs from "emailjs-com";
 import { useForm } from "react-hook-form";
 import { useEffect, useRef, useState } from "react";
 
-export default function FeedBack() {
+export default function FeedBack({ isOpenModal }) {
   const [postMessage, setPostMessage] = useState("");
   const [isSuccessPost, setIsSuccessPost] = useState(false);
   const ref = useRef();
@@ -25,46 +23,51 @@ export default function FeedBack() {
   // }, [setIsOpenModal]);
 
   const form = useForm({
+    defaultValues: {
+      carModel: "",
+      phoneNumber: "+7",
+    },
     mode: "onChange",
   });
-  const { register, formState } = form;
+  const { register, formState, handleSubmit, setValue, watch } = form;
   const { errors, isSubmitting, isDirty, isValid } = formState;
 
-  // function sendEmail(e) {
-  //   e.preventDefault();
-  //   emailjs
-  //     .sendForm(
-  //       "service_pibp90b",
-  //       "template_0rq9l6m",
-  //       e.target || "",
-  //       "EtuIb7Ig5UkGSVB_B"
-  //     )
-  //     .then(
-  //       () => {
-  //         form.reset();
-  //         setPostMessage(
-  //           "Контактные данные успешно отправлены, наш специалист в ближайшее время свяжется с Вами"
-  //         );
-  //         setIsSuccessPost(true);
-  //         setTimeout(() => {
-  //           setIsOpenModal(false);
-  //         }, 2000);
-  //       },
-  //       (error) => {
-  //         console.log(error.text);
-  //       }
-  //     );
-  // }
+  const sendTelegramBot = async (carModel, phoneNumber) => {
+    const res = await fetch("/api/sendMessage", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        carModel,
+        phoneNumber,
+      }),
+    });
+
+    const result = await res.json();
+    if (res.ok) {
+      setPostMessage(
+        "Сообщение отправлено. Наш менеджер свяжется с Вами в ближайшее время."
+      );
+    } else {
+      setPostMessage("Ошибка при отправке сообщения. Попробуйте еще раз!");
+    }
+  };
+
+  const onSubmit = (data) => {
+    const { carModel, phoneNumber } = data;
+    sendTelegramBot(carModel, phoneNumber);
+    setIsSuccessPost(true);
+  };
 
   return (
     <>
-      {/* <div className={styles.wrapperAbsolute}></div> */}
-      <div className={styles.modal} ref={ref}>
+      <div className={isOpenModal ? styles.modalPopup : styles.modal} ref={ref}>
         <Box
           className={styles.formContainer}
           component="form"
           method="POST"
-          // onSubmit={sendEmail}
+          onSubmit={handleSubmit(onSubmit)}
           bgcolor="background.paper"
         >
           <h2 className={styles.title}>Бесплатно оценим Ваш автомобиль!</h2>
@@ -87,9 +90,9 @@ export default function FeedBack() {
                 message: "Данное поле является обязательным",
               },
               pattern: {
-                value: /[a-zA-Zа-яА-ЯЁё -]+$/,
+                value: /^[a-zA-Zа-яА-ЯЁё0-9\s-.,]+$/,
                 message:
-                  "Имя может содержать только латиницу, кириллицу, пробел и дефис",
+                  "Данное поле должно быть вида Kia Rio 2012, разделители допускаются: ',' или '.' ",
               },
             })}
             inputProps={{
@@ -97,7 +100,14 @@ export default function FeedBack() {
                 height: "20px",
               },
             }}
-            helperText={errors.fromName?.message}
+            helperText={errors.carModel?.message}
+            FormHelperTextProps={{
+              style: {
+                color: "red",
+                fontSize: "10px",
+                letterSpacing: "-0.5px",
+              },
+            }}
           />
           <TextField
             className={styles.textInput}
@@ -109,9 +119,9 @@ export default function FeedBack() {
                 message: "Данное поле является обязательным",
               },
               pattern: {
-                value: /^7\d{10}$/,
+                value: /^\+7\s?\d{3}\s?\d{3}\s?\d{2}\s?\d{2}$/,
                 message:
-                  "Поле номер телефона должен начинаться с 7 и содержать 11 цифр",
+                  "Поле номер телефона должен быть в формате +79001112233",
               },
             })}
             inputProps={{
@@ -120,6 +130,13 @@ export default function FeedBack() {
               },
             }}
             helperText={errors.phoneNumber?.message}
+            FormHelperTextProps={{
+              style: {
+                color: "red",
+                fontSize: "10px",
+                letterSpacing: "-0.5px",
+              },
+            }}
           />
 
           <Button
