@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 import TelegramBot from "node-telegram-bot-api";
 
-const botToken = "7595193228:AAHvuFFmj4_UOUN8nMcEVpuQEhoNxbw8sSM";
-const chatId = "1526918915";
+const botToken = process.env.BOT_TOKEN;
+const chatId = process.env.CHAT_ID;
 
 const bot = new TelegramBot(botToken, { polling: false });
 
