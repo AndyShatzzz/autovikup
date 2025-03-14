@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React, { useState } from "react";
 import styles from "./mainInfo.module.scss";
 import FeedBack from "@/entities/feedBack/ui/feedBack";
