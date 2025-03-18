@@ -4,15 +4,15 @@ import Image from "next/image";
 import styles from "./bgWrapper.module.scss";
 
 export const BgWrapper = ({ children, images }) => {
-  const [currentImage, setCurrentImage] = useState(images[0]); // По умолчанию первая картинка
-  const [opacity, setOpacity] = useState(1); // По умолчанию фон видим
-  const sectionsRef = useRef([]); // Рефы для отслеживаемых блоков
+  const [currentImage, setCurrentImage] = useState(images[0]);
+  const [opacity, setOpacity] = useState(1);
+  const sectionsRef = useRef([]);
 
   useEffect(() => {
     const observerOptions = {
-      root: null, // Используем viewport как область наблюдения
+      root: null,
       rootMargin: "0px",
-      threshold: 0.2, // Срабатывает, когда 30% элемента в зоне видимости
+      threshold: 0.3,
     };
 
     const observerCallback = (entries) => {
@@ -33,12 +33,10 @@ export const BgWrapper = ({ children, images }) => {
       observerOptions
     );
 
-    // Наблюдаем за всеми блоками
     sectionsRef.current.forEach((section) => {
       if (section) observer.observe(section);
     });
 
-    // Очистка при размонтировании
     return () => {
       sectionsRef.current.forEach((section) => {
         if (section) observer.unobserve(section);
@@ -46,10 +44,9 @@ export const BgWrapper = ({ children, images }) => {
     };
   }, [images]);
 
-  // Добавляем рефы к дочерним элементам
   const enhancedChildren = React.Children.map(children, (child, index) => {
     return React.cloneElement(child, {
-      ref: (el) => (sectionsRef.current[index] = el), // Привязываем реф к каждому блоку
+      ref: (el) => (sectionsRef.current[index] = el),
     });
   });
 
@@ -57,12 +54,11 @@ export const BgWrapper = ({ children, images }) => {
     <div className={styles.container}>
       <div className={styles.background}>
         <Image
+          className={styles.image}
           src={currentImage}
           alt="Background"
-          layout="fill"
-          objectFit="cover"
           quality={100}
-          style={{ opacity: opacity, transition: "opacity 0.3s linear" }} // Анимация появления фона
+          style={{ opacity: opacity, transition: "opacity 0.3s linear" }}
         />
         {/* Градиентный слой для затемнения */}
         <div

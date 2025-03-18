@@ -5,8 +5,8 @@ import styles from "./feedBack.module.scss";
 import { useForm } from "react-hook-form";
 import { useEffect, useRef, useState } from "react";
 
-export default function FeedBack({ isOpenModal }) {
-  const [postMessage, setPostMessage] = useState("");
+export default function FeedBack({ isOpenModal, setIsOpenModal }) {
+  const [postMessage, setPostMessage] = useState();
   const [isSuccessPost, setIsSuccessPost] = useState(false);
   const ref = useRef();
 
@@ -58,6 +58,11 @@ export default function FeedBack({ isOpenModal }) {
     const { carModel, phoneNumber } = data;
     sendTelegramBot(carModel, phoneNumber);
     setIsSuccessPost(true);
+    if (isOpenModal) {
+      setTimeout(() => {
+        setIsOpenModal(false);
+      }, 2000);
+    }
   };
 
   return (
@@ -159,12 +164,14 @@ export default function FeedBack({ isOpenModal }) {
             </a>
           </p>
         </Box>
-        <Snackbar
-          message={postMessage}
-          autoHideDuration={2000}
-          open={isSuccessPost}
-          onClose={() => setIsSuccessPost((state) => !state)}
-        />
+        {postMessage && (
+          <Snackbar
+            message={postMessage}
+            autoHideDuration={2000}
+            open={isSuccessPost}
+            onClose={() => setIsSuccessPost((state) => !state)}
+          />
+        )}
       </div>
     </>
   );

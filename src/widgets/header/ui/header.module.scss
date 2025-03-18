@@ -18,6 +18,25 @@
   }
 }
 
+@keyframes speedDealAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.speedDeal {
+  animation: speedDealAnimation 3s infinite;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+}
+
 .header {
   width: 100vw;
   padding-top: 30px;

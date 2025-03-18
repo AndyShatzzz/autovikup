@@ -1,39 +1,3 @@
-@keyframes brightnessAnimation {
-  0% {
-    filter: blur(10px) brightness(100%);
-  }
-  10% {
-    filter: blur(8px) brightness(100%);
-  }
-  20% {
-    filter: blur(6px) brightness(100%);
-  }
-  30% {
-    filter: blur(4px) brightness(100%);
-  }
-  40% {
-    filter: blur(2px) brightness(100%);
-  }
-  50% {
-    filter: blur(0);
-  }
-  60% {
-    filter: brightness(90%);
-  }
-  70% {
-    filter: brightness(80%);
-  }
-  80% {
-    filter: brightness(70%);
-  }
-  90% {
-    filter: brightness(60%);
-  }
-  100% {
-    filter: brightness(50%);
-  }
-}
-
 @keyframes textAnimation {
   0% {
     opacity: 0;
@@ -71,29 +35,8 @@
   width: 100%;
   height: 100vh;
   // max-height: 1800px;
-  overflow-y: hidden;
-  position: relative;
-}
-
-.imgContainer {
-  width: 100%;
-  height: 100vh;
-  // max-height: 900px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.img {
-  width: 100%;
-  height: 100vh;
-  // max-height: 900px;
-  object-fit: cover;
-  object-position: center;
-  pointer-events: none;
-  filter: brightness(50%);
-  animation: brightnessAnimation 1s linear;
+  // overflow-y: hidden;
+  // position: relative;
 }
 
 .wrapper {

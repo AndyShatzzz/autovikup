@@ -1,11 +1,8 @@
-"use client";
-import React, { useEffect, useRef } from "react";
-import styles from "./feedBackPopup.module.scss";
-import FeedBack from "@/entities/feedBack/ui/feedBack";
 import { IconButton } from "@mui/material";
+import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
 
-export const FeedBackPopup = ({ isOpenModal, setIsOpenModal }) => {
+export const AutoReviewFeedback = ({ isOpenModal, setIsOpenModal }) => {
   const popupRef = useRef();
   useEffect(() => {
     const checkIfClickedOutside = (e) => {
