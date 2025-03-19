@@ -1,0 +1,160 @@
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  z-index: 1;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.formContainer {
+  width: 1100px;
+  height: 480px;
+  border-radius: 20px;
+  background-color: #f1f1f1;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  background-image: url("../images/feedBackBg1.webp");
+  background-repeat: no-repeat;
+  background-position: calc(0% - 40px) 50%;
+  background-size: 37% auto;
+}
+
+.title {
+  width: 700px;
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  line-height: 52px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.form {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.input {
+  margin-bottom: 10px;
+  // height: 90px;
+}
+
+.inputFile {
+  margin-top: 16px;
+}
+
+.inputFile input[type="file"] {
+  display: none;
+}
+
+.inputFile label {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #1976d2;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.inputFile label:hover {
+  background-color: #1565c0;
+}
+
+.buttonSubmit {
+  margin-top: 20px;
+  border-radius: 50px;
+  align-self: self-end;
+}
+
+@media screen and (max-width: 1110px) {
+  .formContainer {
+    width: 900px;
+    height: 470px;
+    background-size: 40% auto;
+  }
+
+  .title {
+    width: 560px;
+    font-size: 32px;
+    line-height: 52px;
+    margin-bottom: 20px;
+  }
+
+  .form {
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .formContainer {
+    width: 600px;
+    height: 490px;
+    background-position: calc(0% - 40px) 50%;
+    background-size: 55% auto;
+  }
+
+  .title {
+    width: 300px;
+    font-size: 32px;
+    line-height: 34px;
+    margin-bottom: 20px;
+  }
+
+  .form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .formContainer {
+    width: 300px;
+    height: 700px;
+    background-position: calc(0% - 30px) 5%;
+    background-size: 100% auto;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .title {
+    width: 270px;
+    font-size: 28px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .form {
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}

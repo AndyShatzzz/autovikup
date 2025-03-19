@@ -17,6 +17,7 @@ import { StageOfBuy } from "@/widgets/stageOfBuy/ui/stageOfBuy";
 import { HaveQuestion } from "@/widgets/haveQuestion/ui/haveQuestion";
 import { WhatDocuments } from "@/widgets/whatDocuments/ui/whatDocuments";
 import { Footer } from "@/widgets/footer/ui/footer";
+import { AutoReviewFeedback } from "@/entities/autoReviewFeedback/ui/autoReviewFeedback";
 
 export default function Home() {
   const backgroundImages = [img1, img2, img3, img5, img6];
@@ -31,6 +32,7 @@ export default function Home() {
         <CarPriceMessenger data-image-index={2} />
         <CarPriceContent />
         <WhatCarBuy data-image-index={3} />
+        <AutoReviewFeedback isOpenModal={true} />
         <StageOfBuy />
         <HaveQuestion />
         <WhatDocuments />

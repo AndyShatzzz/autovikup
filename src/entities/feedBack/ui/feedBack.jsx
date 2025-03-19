@@ -29,7 +29,7 @@ export default function FeedBack({ isOpenModal, setIsOpenModal }) {
     },
     mode: "onChange",
   });
-  const { register, formState, handleSubmit, setValue, watch } = form;
+  const { register, formState, handleSubmit } = form;
   const { errors, isSubmitting, isDirty, isValid } = formState;
 
   const sendTelegramBot = async (carModel, phoneNumber) => {
