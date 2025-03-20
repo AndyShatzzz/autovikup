@@ -32,7 +32,7 @@ export default function Home() {
         <CarPriceMessenger data-image-index={2} />
         <CarPriceContent />
         <WhatCarBuy data-image-index={3} />
-        <AutoReviewFeedback isOpenModal={true} />
+        <AutoReviewFeedback />
         <StageOfBuy />
         <HaveQuestion />
         <WhatDocuments />

@@ -114,7 +114,7 @@
 
 .subtitle {
   width: 150px;
-  height: 80px;
+  height: 100px;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -123,6 +123,9 @@
   font-size: 14px;
   line-height: 16px;
   color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 920px) {

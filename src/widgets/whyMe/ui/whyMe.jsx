@@ -11,25 +11,25 @@ export default function WhyMe() {
       image: image1,
       clName: "image1",
       title: "Бесплатный выезд и осмотр",
-      _id: "6bdc2c2b-d8cf-41b0-8ee3-306beb3f28c1",
+      _id: "6bdc2c2b-d8cf-71b0-8ee3-306beb3f28c1",
     },
     {
       image: image2,
       clName: "image2",
       title: "Деньги сразу удобным для вас способом",
-      _id: "6bdc2c2b-d8cf-41b0-8ee3-306beb3f28c2",
+      _id: "6bdc2c2b-d8cf-41b0-8ee3-3099eb3f28c2",
     },
     {
       image: image3,
       clName: "image3",
       title: "Работаем без выходных",
-      _id: "6bdc2c2b-d8cf-41b0-8ee3-306beb3f28c3",
+      _id: "6bdc2c2b-d8cf-41b0-8ee3-300deb3f28c3",
     },
     {
       image: image4,
       clName: "image4",
       title: "Выкупаем автомобили в любом состоянии",
-      _id: "6bdc2c2b-d8cf-41b0-8ee3-306beb3f28c4",
+      _id: "6bdc2c2b-d8cf-41b0-8ee3-301beb3f28c4",
     },
   ];
 

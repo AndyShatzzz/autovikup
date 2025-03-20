@@ -88,6 +88,9 @@ export const Footer = () => {
             <Link href="#whatCarBuy" className={styles.links}>
               Выкупленные авто
             </Link>
+            <Link href="#carFeedback" className={styles.links}>
+              Оставить отзыв
+            </Link>
             <Link href="#stageOfBuy" className={styles.links}>
               Порядок выкупа авто
             </Link>

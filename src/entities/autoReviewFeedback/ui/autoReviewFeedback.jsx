@@ -1,12 +1,16 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./autoReviewFeedback.module.scss";
-import { Box, Button, Snackbar, TextField } from "@mui/material";
+import {
+  Box,
+  Button,
+  Snackbar,
+  TextField,
+  CircularProgress,
+} from "@mui/material";
 import { useForm } from "react-hook-form";
-import bg1 from "@/shared/images/bg1.webp";
-import Image from "next/image";
 
-export const AutoReviewFeedback = ({ isOpenModal }) => {
+export const AutoReviewFeedback = () => {
   const [postMessage, setPostMessage] = useState();
   const [isSuccessPost, setIsSuccessPost] = useState(false);
 
@@ -22,40 +26,17 @@ export const AutoReviewFeedback = ({ isOpenModal }) => {
   const { register, formState, handleSubmit } = form;
   const { errors, isSubmitting, isDirty, isValid } = formState;
 
-  // const sendTelegramBot = async (automobile, feedback, image) => {
-  //   const res = await fetch("/api/sendFeedback", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify({
-  //       automobile,
-  //       feedback,
-  //       image,
-  //     }),
-  //   });
-
-  //   const result = await res.json();
-  //   if (res.ok) {
-  //     setPostMessage(
-  //       "Спасибо большое за отзыв, Ваше мнение очень важно для нас!"
-  //     );
-  //   } else {
-  //     setPostMessage("Ошибка при отправке сообщения. Попробуйте еще раз!");
-  //   }
-  // };
-
   const sendTelegramBot = async (automobile, feedback, image) => {
     const formData = new FormData();
     formData.append("automobile", automobile);
     formData.append("feedback", feedback);
     if (image) {
-      formData.append("image", image); // Добавляем файл в FormData
+      formData.append("image", image);
     }
 
     const res = await fetch("/api/sendFeedback", {
       method: "POST",
-      body: formData, // Используем FormData вместо JSON
+      body: formData,
     });
 
     const result = await res.json();
@@ -68,15 +49,15 @@ export const AutoReviewFeedback = ({ isOpenModal }) => {
     }
   };
 
-  const onSubmit = (data) => {
+  async function onSubmit(data) {
     const { automobile, feedback, image } = data;
-    sendTelegramBot(automobile, feedback, image);
-    setIsSuccessPost(true);
-  };
+    await sendTelegramBot(automobile, feedback, image);
+    await setIsSuccessPost(true);
+  }
 
   return (
     <>
-      <section className={styles.container}>
+      <section id="carFeedback" className={styles.container}>
         <div className={styles.formContainer}>
           <Box
             className={styles.form}
@@ -95,11 +76,6 @@ export const AutoReviewFeedback = ({ isOpenModal }) => {
                   value: true,
                   message: "Данное поле является обязательным",
                 },
-                // pattern: {
-                //   value: /^[a-zA-Zа-яА-ЯЁё0-9\s-.,]+$/,
-                //   message:
-                //     "Данное поле должно быть вида: Сергей, Kia Rio 2012, разделители допускаются: ',' или '.' ",
-                // },
                 minLength: {
                   value: 10,
                   message: "Минимум - 10 символов",
@@ -124,11 +100,6 @@ export const AutoReviewFeedback = ({ isOpenModal }) => {
                   value: true,
                   message: "Данное поле является обязательным",
                 },
-                // pattern: {
-                //   value: /^[a-zA-Zа-яА-ЯЁё0-9\s-.,]+$/,
-                //   message:
-                //     "Допускается кирилица, латиница, цифры и ',' или '.' ",
-                // },
                 minLength: {
                   value: 20,
                   message: "Минимум - 20 символов",
@@ -144,11 +115,10 @@ export const AutoReviewFeedback = ({ isOpenModal }) => {
             <TextField
               type="file"
               className={styles.input}
-              // fullWidth
-              inputProps={{ accept: "image/*" }} // Разрешаем загрузку только изображений
+              inputProps={{ accept: "image/*" }}
               onChange={(e) => {
                 const file = e.target.files[0];
-                form.setValue("image", file); // Сохраняем файл в форме
+                form.setValue("image", file);
               }}
               FormHelperTextProps={{
                 style: {
@@ -162,7 +132,11 @@ export const AutoReviewFeedback = ({ isOpenModal }) => {
               variant="contained"
               disabled={isSubmitting || !isDirty || !isValid}
             >
-              Оставить отзыв
+              {isSubmitting ? (
+                <CircularProgress size={24} color="inherit" />
+              ) : (
+                "Оставить отзыв"
+              )}
             </Button>
           </Box>
         </div>

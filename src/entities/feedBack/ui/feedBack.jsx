@@ -1,9 +1,14 @@
 "use client";
-import { Box, TextField, Button, Snackbar, IconButton } from "@mui/material";
-import CloseIcon from "@mui/icons-material/Close";
+import {
+  Box,
+  TextField,
+  Button,
+  Snackbar,
+  CircularProgress,
+} from "@mui/material";
 import styles from "./feedBack.module.scss";
 import { useForm } from "react-hook-form";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 export default function FeedBack({ isOpenModal, setIsOpenModal }) {
   const [postMessage, setPostMessage] = useState();
@@ -54,16 +59,16 @@ export default function FeedBack({ isOpenModal, setIsOpenModal }) {
     }
   };
 
-  const onSubmit = (data) => {
+  async function onSubmit(data) {
     const { carModel, phoneNumber } = data;
-    sendTelegramBot(carModel, phoneNumber);
-    setIsSuccessPost(true);
+    await sendTelegramBot(carModel, phoneNumber);
+    await setIsSuccessPost(true);
     if (isOpenModal) {
-      setTimeout(() => {
+      await setTimeout(() => {
         setIsOpenModal(false);
       }, 2000);
     }
-  };
+  }
 
   return (
     <>
@@ -151,15 +156,15 @@ export default function FeedBack({ isOpenModal, setIsOpenModal }) {
             disabled={isSubmitting || !isDirty || !isValid}
             fullWidth
           >
-            Заказать звонок
+            {isSubmitting ? (
+              <CircularProgress size={24} color="inherit" />
+            ) : (
+              "Заказать звонок"
+            )}
           </Button>
           <p className={styles.personalData}>
             Нажимая {`"Заказать звонок"`}, вы принимаете
-            <a
-              target="blank"
-              className={styles.personalDataLink}
-              href="https://tahoguru.ru/personal-data-agreament-tahoguru.pdf"
-            >
+            <a target="blank" className={styles.personalDataLink} href="#">
               {` Условия обработки персональных данных`}
             </a>
           </p>

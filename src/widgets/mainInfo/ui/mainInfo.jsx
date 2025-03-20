@@ -16,7 +16,7 @@ export const MainInfo = () => {
             <span className={styles.colorRed}>Снимем авто с учета</span> в день
             сделки! Больше никаких штрафов или звонков от новых владельцев. Мы
             гарантируем{" "}
-            <span className={styles.colorRed}>честную и прозрачную</span>
+            <span className={styles.colorRed}>честную и прозрачную </span>
             сделку!
           </p>
           <p className={styles.subtitle}>
@@ -32,8 +32,9 @@ export const MainInfo = () => {
             <span className={styles.colorRed}> Черноземью</span>
           </p>
           <p className={styles.subtitle}>
-            Выезд специалиста и оценка вашего авто -{" "}
-            <span className={styles.colorRed}>0 руб</span>
+            Рекомендуйте нас друзьям и зарабатывайте
+            <span className={styles.colorRed}> от 10 000 рублей </span>
+            на свою карту за каждую успешную сделку
           </p>
           <p className={styles.subtitle}>
             Эвакуатор при необходимости -{" "}
