@@ -13,7 +13,11 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Авто Выкуп 48",
-  description: "Покупка и продажа автомобилей",
+  description:
+    "Выкуп автомобилей в Липецке и Липецкой области, работаем по всему Черноземью",
+  other: {
+    "yandex-verification": "dde578f2dad68fa7",
+  },
 };
 
 export default function RootLayout({ children }) {
