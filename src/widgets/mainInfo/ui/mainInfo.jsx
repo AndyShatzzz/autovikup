@@ -10,7 +10,7 @@ export const MainInfo = () => {
         <div className={styles.textContainer}>
           <h1 className={styles.title}>
             Выкупим Ваш автомобиль в день заявки
-            <span className={styles.colorRed}>за 1 час</span>
+            <span className={styles.colorRed}> за 1 час</span>
           </h1>
           <p className={styles.subtitle}>
             <span className={styles.colorRed}>Снимем авто с учета</span> в день
