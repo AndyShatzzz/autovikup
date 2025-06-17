@@ -31,7 +31,7 @@ export const metadata = {
   ],
   viewport: "width=device-width, initial-scale=1.0",
   other: {
-    "yandex-verification": "dde578f2dad68fa7",
+    "yandex-verification": "39ec386e45f1906b",
     "google-site-verification": "iM_a-g_NQfKkRg7LdHMoHjr_rDLj0bZxz6QR56iOSBs",
   },
   openGraph: {

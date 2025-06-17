@@ -9,27 +9,28 @@ export const MainInfo = () => {
       <div className={styles.contentContainer}>
         <div className={styles.textContainer}>
           <h1 className={styles.title}>
-            Выкупим Ваш автомобиль в день заявки{" "}
-            <span className={styles.colorRed}>за 1 час</span>
+            Срочный выкуп автомобилей в Липецке, области и всему Черноземью в
+            день заявки
+            <span className={styles.colorRed}> за 1 час!</span>
           </h1>
           <p className={styles.subtitle}>
-            <span className={styles.colorRed}>Снимем авто с учета</span> в день
-            сделки! Больше никаких штрафов или звонков от новых владельцев. Мы
-            гарантируем{" "}
-            <span className={styles.colorRed}>честную и прозрачную </span>
-            сделку!
+            Выкупаем автомобили{" "}
+            <span className={styles.colorRed}>
+              любого состояния, а так же с юридическими проблемами
+            </span>
           </p>
+
           <p className={styles.subtitle}>
-            Удаленно оценим Вашу машину за
+            Удаленно оценим Вашу машину за{" "}
             <span className={styles.colorRed}> 10 минут</span>
           </p>
           <p className={styles.subtitle}>
             Готовы предложить Вам
-            <span className={styles.colorRed}> больше,</span> чем другие
+            <span className={styles.colorRed}> больше,</span> чем другие!
           </p>
           <p className={styles.subtitle}>
-            Работаем по всему
-            <span className={styles.colorRed}> Черноземью</span>
+            Окажем помощь в{" "}
+            <span className={styles.colorRed}> снятии автомобиля с учета</span>
           </p>
           <p className={styles.subtitle}>
             Рекомендуйте нас друзьям и зарабатывайте
