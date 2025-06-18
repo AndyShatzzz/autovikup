@@ -12,15 +12,19 @@ export const CarPriceContent = () => {
         <div className={styles.contentContainer}>
           <div className={styles.subtitleContainer}>
             <h3 className={styles.subtitle}>
-              Быстро оценим Ваш автомобиль в мессенджерах за 10 минут
+              Направьте фото и дополнительную информацию об автомобиле в
+              мессенджеры
             </h3>
           </div>
           <div className={styles.subtitleContainer}>
-            <h3 className={styles.subtitle}>Отправляйте фото в мессенджеры</h3>
+            <h3 className={styles.subtitle}>
+              Проведем быструю оценку Вашего автомобиля за 10 минут
+            </h3>
           </div>
           <div className={styles.subtitleContainer}>
             <h3 className={styles.subtitle}>
-              Если цена Вас устраивает, договариваемся о месте и времени встречи
+              При согласовании цены с Вами, приедем в удобное для Вас время и
+              место
             </h3>
           </div>
           <div className={styles.socialContainer}>
