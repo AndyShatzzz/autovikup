@@ -30,6 +30,13 @@ export const metadata = {
     "снимаем авто с учета",
   ],
   viewport: "width=device-width, initial-scale=1.0",
+  alternates: {
+    canonical: "https://av48.ru/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   other: {
     "yandex-verification": "39ec386e45f1906b",
     "google-site-verification": "iM_a-g_NQfKkRg7LdHMoHjr_rDLj0bZxz6QR56iOSBs",
