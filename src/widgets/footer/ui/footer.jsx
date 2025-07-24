@@ -23,9 +23,9 @@ export const Footer = () => {
               <a
                 className={styles.phNumber}
                 target="blank"
-                href="tel:+79205206969"
+                href="tel:+79005984333"
               >
-                +7(920) 520-69-69
+                +7(900) 598-43-33
               </a>
               <div className={styles.socialLink}>
                 <EmailIcon width="32px" height="32px" sx={{ color: "white" }} />
