@@ -38,7 +38,7 @@ export const metadata = {
     follow: true,
   },
   other: {
-    "yandex-verification": "39ec386e45f1906b",
+    "yandex-verification": "c96e41a4e152866d",
     "google-site-verification": "iM_a-g_NQfKkRg7LdHMoHjr_rDLj0bZxz6QR56iOSBs",
   },
   openGraph: {
