@@ -22,8 +22,8 @@ export const StageOfBuy = () => {
             <div className={styles.stageContainer}>
               <h3 className={styles.stageTitle}>Оставить заявку</h3>
               <p className={styles.stageText}>
-                Оставьте заявку на сайте или позвоните нам по номеру +7(900)
-                598-43-33
+                Оставьте заявку на сайте или позвоните нам по номеру +7(993)
+                585-43-93
               </p>
             </div>
           </div>

@@ -23,9 +23,9 @@ export const Footer = () => {
               <a
                 className={styles.phNumber}
                 target="blank"
-                href="tel:+79005984333"
+                href="tel:+79935854393"
               >
-                +7(900) 598-43-33
+                +7(993) 585-43-93
               </a>
               <div className={styles.socialLink}>
                 <EmailIcon width="32px" height="32px" sx={{ color: "white" }} />
@@ -50,7 +50,7 @@ export const Footer = () => {
                 <div className={styles.socialLinkMessengersItemLink}>
                   <a
                     className={styles.linkLogoMessengers}
-                    href="https://wa.me/79205206969"
+                    href="https://wa.me/79935854393"
                     target="blank"
                   >
                     <Avatar
@@ -61,7 +61,7 @@ export const Footer = () => {
                   </a>
                   <a
                     className={styles.linkLogoMessengers}
-                    href="https://t.me/ilusha_tarasov"
+                    href="https://t.me/RulonOboev48"
                     target="blank"
                   >
                     <Avatar

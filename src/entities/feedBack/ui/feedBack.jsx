@@ -86,8 +86,8 @@ export default function FeedBack({ isOpenModal, setIsOpenModal }) {
           </p>
           <p className={styles.subtitle}>
             Или Вы можете позвонить нам:{" "}
-            <a className={styles.linkPhone} href="tel:+79005984333">
-              +7(900) 598-43-33
+            <a className={styles.linkPhone} href="tel:+79935854393">
+              +7(993) 585-43-93
             </a>
           </p>
           <TextField

@@ -30,7 +30,7 @@ export const CarPriceContent = () => {
           <div className={styles.socialContainer}>
             <a
               className={styles.whatsApp}
-              href="https://wa.me/79205206969"
+              href="https://wa.me/79935854393"
               target="blank"
             >
               <WhatsAppIcon className={styles.icon} />
@@ -38,7 +38,7 @@ export const CarPriceContent = () => {
             </a>
             <a
               className={styles.telegram}
-              href="https://t.me/ilusha_tarasov"
+              href="https://t.me/RulonOboev48"
               target="blank"
             >
               <TelegramIcon className={styles.icon} />

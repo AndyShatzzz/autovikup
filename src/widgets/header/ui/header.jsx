@@ -98,13 +98,13 @@ export default function Header() {
               Процедура выкупа
             </Link>
             <div className={styles.containerFeedback}>
-              <a className={styles.linkPhone} href="tel:+79005984333">
-                +7(900) 598-43-33
+              <a className={styles.linkPhone} href="tel:+79935854393">
+                +7(993) 585-43-93
               </a>
               <div className={styles.socials}>
                 <a
                   className={styles.linkSocial}
-                  href="https://wa.me/79205206969"
+                  href="https://wa.me/79935854393"
                   target="blank"
                 >
                   <Avatar
@@ -115,7 +115,7 @@ export default function Header() {
                 </a>
                 <a
                   className={styles.linkSocial}
-                  href="https://t.me/ilusha_tarasov"
+                  href="https://t.me/RulonOboev48"
                   target="blank"
                 >
                   <Avatar
